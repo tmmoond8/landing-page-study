@@ -8,7 +8,11 @@ interface Props {
   once?: boolean;
 }
 
-export default function FadeUp({ children, as = 'div', once = false }: Props) {
+export default function FadeLeft({
+  children,
+  as = 'div',
+  once = false,
+}: Props) {
   const AnimatedFadeUp = motion[as];
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
@@ -21,13 +25,13 @@ export default function FadeUp({ children, as = 'div', once = false }: Props) {
       ref={ref}
       initial={{
         opacity: 0,
-        y: 30,
+        x: 30,
       }}
       animate={
         isInView
           ? {
               opacity: 1,
-              y: 0,
+              x: 0,
             }
           : {}
       }

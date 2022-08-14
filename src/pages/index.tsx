@@ -10,24 +10,36 @@ const Home: NextPage = () => {
       <Animated.FadeUp>
         <Peoples />
       </Animated.FadeUp>
-      <Animated.FadeUp>
+      <Animated.FadeLeft>
         <Card />
-      </Animated.FadeUp>
-      <Animated.FadeUp>
+      </Animated.FadeLeft>
+      <Animated.FadeLeft>
         <Card />
-      </Animated.FadeUp>
-      <Animated.FadeUp>
+      </Animated.FadeLeft>
+      <Animated.FadeLeft>
         <Card />
-      </Animated.FadeUp>
-      <Animated.FadeUp>
+      </Animated.FadeLeft>
+      <Animated.FadeLeft>
         <Card />
-      </Animated.FadeUp>
-      <Animated.FadeUp>
+      </Animated.FadeLeft>
+      <Animated.FadeLeft>
         <Card />
-      </Animated.FadeUp>
-      <Animated.FadeUp>
+      </Animated.FadeLeft>
+      <Animated.FadeLeft>
         <Card />
-      </Animated.FadeUp>
+      </Animated.FadeLeft>
+      <Animated.FadeRight>
+        <Card />
+      </Animated.FadeRight>
+      <Animated.FadeRight>
+        <Card />
+      </Animated.FadeRight>
+      <Animated.FadeRight>
+        <Card />
+      </Animated.FadeRight>
+      <Animated.FadeRight>
+        <Card />
+      </Animated.FadeRight>
     </>
   );
 };
