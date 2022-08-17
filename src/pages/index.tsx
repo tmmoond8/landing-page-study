@@ -1,7 +1,9 @@
 import type { NextPage } from 'next';
 import Animated from 'src/components/Animated';
+import { motion } from 'framer-motion';
 
 const Home: NextPage = () => {
+  const Hovered = motion.div;
   return (
     <>
       <Animated.FadeUp>
@@ -35,9 +37,12 @@ const Home: NextPage = () => {
       <Animated.FadeRight>
         <Card />
       </Animated.FadeRight>
-      <Animated.FadeRight>
-        <Card />
-      </Animated.FadeRight>
+      <Hovered whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        <Animated.FadeRight>
+          <Card />
+        </Animated.FadeRight>
+      </Hovered>
+
       <Animated.FadeRight>
         <Card />
       </Animated.FadeRight>
