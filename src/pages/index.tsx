@@ -9,6 +9,7 @@ const Home: NextPage = () => {
       <Animated.FadeUp>
         <h1 className="text-3xl">App</h1>
       </Animated.FadeUp>
+      <Animated.Example />
       <Animated.Pendulum>down</Animated.Pendulum>
       <Animated.FadeUp>
         <Peoples />
