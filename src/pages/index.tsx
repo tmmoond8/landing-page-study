@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Animated from 'src/components/Animated';
+import MotionCard from 'src/components/MotionCard';
 import { motion } from 'framer-motion';
 
 const Home: NextPage = () => {
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <Animated.FadeUp>
         <Peoples />
       </Animated.FadeUp>
+      <MotionCard />
       <Animated.FadeLeft>
         <Card />
       </Animated.FadeLeft>
