@@ -6,16 +6,26 @@ export default function DragBox() {
   const constraintsRef = React.useRef(null);
 
   return (
-    <Container>
-      <DragArea className="drag-area" ref={constraintsRef} />
-      <Box drag dragConstraints={constraintsRef} />
-    </Container>
+    <Wrapper>
+      <Container>
+        <DragArea className="drag-area" ref={constraintsRef} />
+        <Box drag dragConstraints={constraintsRef} />
+      </Container>
+    </Wrapper>
   );
 }
 
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(180deg, #9c1aff 0%, rgb(119, 0, 255) 100%);
+`;
+
 const Container = styled.div`
-  opacity: 0.2;
-  background: red;
   position: absolute;
   width: 300px;
   height: 300px;
@@ -25,8 +35,7 @@ const Container = styled.div`
 `;
 
 const DragArea = styled(motion.div)`
-  opacity: 0.2;
-  background: red;
+  background: #00000020;
   position: absolute;
   width: 300px;
   height: 300px;
@@ -36,7 +45,12 @@ const DragArea = styled(motion.div)`
 `;
 
 const Box = styled(motion.div)`
-  background-color: white;
-  width: 100px;
-  height: 100px;
+  background: white;
+  border-radius: 30px;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  z-index: 1000;
+  top: calc(50% - 150px / 2);
+  left: calc(50% - 150px / 2);
 `;
